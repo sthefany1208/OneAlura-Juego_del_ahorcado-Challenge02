@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Alura - Hangman game </title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game.html">
+    <link rel="stylesheet" href="new-word.html">
+
+
+</head>
+
+<body>
+    <header class="encabezado">
+        <img src="images/Logo.png" alt="Logo-Alura" class="logo">
+        <label> Hangman game </label>
+    </header>
+    <main>
+        <section class="options">
+            <input type="button" value="Start Game" class="button-start" id="bttn-start"
+                onclick="location.href='game.html'">
+            <input type="button" value="Add word" class="button-add-word" onclick="location.href='new-word.html'">
+        </section>
+    </main>
+    <footer class="copy">
+        <label> &copy Copyright Sthefany Zambrano. </label>
+    </footer>
+    <script src="hangman.js"></script>
+
+</body>
+
+</html>

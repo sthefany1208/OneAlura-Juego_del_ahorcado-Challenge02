@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
+
+    <title> Hangman Game</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <img src="images/Logo.png" alt="Logo-Alura" class="logo">
+    </header>
+    <main>
+        <div class="imageContainer" id="game-over" hidden>
+            <img src=" images/gameover.jpg" alt=" GAME OVER" class="animation">
+        </div>
+        <div class="imageContainer" id="you-win" hidden>
+            <img src="images/youWin.jpg" alt="Win" class="animation">
+        </div>
+        <section class="draw">
+            <canvas id="darw-hangman" width="400" height="500"></canvas>
+        </section>
+
+        <div id="wordContainer" class="containerLetters"></div>
+
+        <div id="usedLetters" class="errorLetters"></div>
+
+        <section>
+            <div class="buttons" id="buttons">
+                <input type="button" value="Start" class="button-new-game" id="bttnnewGame" onclick="game()">
+
+                <input type="button" value="Out" class="button-out" onclick="reset()">
+            </div>
+        </section>
+
+
+    </main>
+    <script src="hangman.js"></script>
+
+</body>
+
+</html>

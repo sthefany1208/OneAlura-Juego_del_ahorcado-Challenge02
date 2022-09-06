@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.html">
+
+
+    <title> Add Word</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <img src="images/Logo.png" alt="Logo-Alura" class="logo">
+    </header>
+    <main>
+        <div class="input-word">
+            <input type="text" placeholder="Enter the word" class="word" id="newWord" required autofocus>
+            <label class="warning"> &#9888 Max. 8 letters</label>
+        </div>
+        <section class="cont-buttons">
+
+            <div class="buttons">
+
+                <input type="button" value=" Save & Start" class="button-save" id="bttn-save" onclick="addWord()">
+                <input type="button" value=" Cancel" class="button-cancel" onclick="location.href='index.html'">
+            </div>
+        </section>
+
+    </main>
+    <script src="hangman.js"></script>
+
+
+
+</body>
+
+
+</html>
