@@ -46,6 +46,7 @@ let words = [
   "FUSION",
   "LOGICA",
   "NUCLEAR",
+  "HANGMAN",
 ];
 
 function game() {
