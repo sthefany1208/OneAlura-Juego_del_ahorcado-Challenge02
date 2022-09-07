@@ -15,7 +15,7 @@ let random;
 console.log(document.cookie);
 let words =
   document.cookie.length === 0
-    ? []
+    ? ["JAVA", "PROGRAMA", "GITHUB"]
     : document.cookie.substring(6, document.cookie.length).split("%2C");
 
 function game() {
@@ -146,10 +146,13 @@ function drawLetters() {
 
 function validletter(evento) {
   let newLetter = evento.key.toUpperCase();
+  let keyboard = document.getElementById("keyboard");
+  keyboard.value = "";
 
   if (newLetter.match(/^[a-zñ]$/i) && !everyLetters.includes(newLetter)) {
     letterInput(newLetter);
   }
+  evento.key = "";
 }
 function letterInput(letter) {
   if (secretWord.includes(letter)) {
