@@ -11,6 +11,7 @@ body{
     font-size: 4rem;
    display: block;
    text-align: center;
+   margin-top: 20px;
    
 
 }
@@ -42,7 +43,7 @@ body{
     transform: translateY(6px);
 }
 .button-add-word{
-    margin-top: 5%;
+    margin-top: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -114,11 +115,11 @@ body{
 .buttons{
     
     text-align: center;
-    margin: 2% ;
+    margin: 1% ;
     padding:  0;
 }
 .cont-buttons{
-    margin: 5% 0;
+    margin: 100px 0;
     padding: 10%;
 }
 
@@ -208,7 +209,7 @@ body{
     position: absolute;
     width: 100%;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 150px;
 }
 
 .animation{
@@ -233,8 +234,34 @@ body{
 }
 
 .copy{
-    text-align: right;
-    color:gray;
+    text-align: center;
+    color:rgb(54, 55, 56);
     font-size: 1rem;
-    margin: 20px;
+    margin: 100px;
+}
+@media screen and (max-width:800px){
+    .copy{
+        margin-top: 200px;
+    }
+    .options{
+        width: 100%;
+        margin-top: 200px;
+    }
+    .word{
+        width: 50%;
+        padding: 2%;
+    }
+    .cont-buttons{
+        margin-top: 200px;
+    }
+    #wordContainer{
+        width:100%;
+        margin: 5px 1% 1%;
+    }
+    .buttons{
+        margin-top: 100px;
+    }
+    .imageContainer{
+        margin-top: 250px;
+    }
 }
