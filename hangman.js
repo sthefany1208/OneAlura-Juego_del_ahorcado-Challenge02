@@ -12,42 +12,11 @@ let hitcounter;
 let errores;
 let everyLetters = [];
 let random;
-let words = [
-  "COCINA",
-  "MARIPOSA",
-  "ESTANTE",
-  "BARCO",
-  "FLAMENCO",
-  "HOGAR",
-  "PROGRAMA",
-  "JUEGO",
-  "TORMENTA",
-  "PROCESAR",
-  "SERVIDOR",
-  "HASHTAG",
-  "ENLACE",
-  "HOSTING",
-  "CACHE",
-  "BACKUP",
-  "COOKIES",
-  "BINARIO",
-  "HARDWARE",
-  "HTTP",
-  "SCRIPT",
-  "MEMORIA",
-  "PLUGIN",
-  "SPAM",
-  "WEBINAR",
-  "WIDGET",
-  "CIENCIA",
-  "DIGITAL",
-  "DISEÑO",
-  "ETICA",
-  "FUSION",
-  "LOGICA",
-  "NUCLEAR",
-  "HANGMAN",
-];
+console.log(document.cookie);
+let words =
+  document.cookie.length === 0
+    ? []
+    : document.cookie.substring(6, document.cookie.length).split("%2C");
 
 function game() {
   usedLetters = [];
@@ -64,23 +33,21 @@ function addWord() {
 
   if (addWord.value.length > 8) {
     alert("the word must have max 8 letters");
-  }
-  if (addWord.value == "") {
-    alert("Input new word");
-  }
-  if (addWord.value.length <= 8 && addWord.value != "") {
-    for (let i = 0; i <= words.length; i++) {
+    addWord.value = "";
+  } else {
+    if (addWord.value == "") {
+      alert("Input new word");
+    } else {
       if (words.includes(addWord.value.toUpperCase())) {
         alert("This word exist   " + addWord.value);
       } else {
         words.push(addWord.value.toUpperCase());
+        document.cookie = "words=" + encodeURIComponent(words);
         alert("Your word " + addWord.value + " has been added");
+        addWord.value = "";
       }
-      break;
     }
   }
-
-  addWord.value = "";
 }
 
 function drawHangmang() {
@@ -203,7 +170,6 @@ function viewLetter(letter) {
 }
 
 function letterFalse() {
-  console.log(usedLetters);
   drawHangmang();
 
   if (errores == 10) {
