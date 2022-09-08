@@ -220,8 +220,8 @@ body{
   }
   .keyboard>input{
     color: transparent;
-    border:0;
-    border-style: none;
+    /*border:0;
+    border-style: none;*/
     background-color: transparent;
     position: absolute;
     width: 100%;
