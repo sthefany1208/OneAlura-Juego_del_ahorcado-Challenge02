@@ -219,8 +219,8 @@ body{
     animation-iteration-count: infinite;
   }
   .keyboard>input{
-    color: transparent;
-    /*border:0;
+   /* color: transparent;
+    border:0;
     border-style: none;*/
     background-color: transparent;
     position: absolute;
