@@ -163,6 +163,9 @@ body{
     box-shadow: 0 5px #666;
     transform: translateY(6px);
 }
+.button-cancel{
+    margin-top: 2px;
+}
 
 .button-cancel:hover{
     background-color:darkseagreen;
@@ -218,18 +221,7 @@ body{
     animation-name: animation-images;
     animation-iteration-count: infinite;
   }
-  .keyboard>input{
-   /* color: transparent;
-    border:0;
-    border-style: none;*/
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
-    bottom: 29%;
-    height: 12%;
-    outline: none;
 
-  }
 
 @keyframes animation-images{
     from {

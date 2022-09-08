@@ -146,14 +146,12 @@ function drawLetters() {
 
 function validletter(evento) {
   let newLetter = evento.key.toUpperCase();
-  let keyboard = document.getElementById("keyboard");
-  keyboard.value = "";
 
   if (newLetter.match(/^[a-zñ]$/i) && !everyLetters.includes(newLetter)) {
     letterInput(newLetter);
   }
-  evento.key = "";
 }
+
 function letterInput(letter) {
   if (secretWord.includes(letter)) {
     correctLetter(letter);
@@ -166,6 +164,7 @@ function letterInput(letter) {
   }
   everyLetters.push(letter);
 }
+
 function viewLetter(letter) {
   const letterElement = document.createElement("span");
   letterElement.innerHTML = letter;
@@ -175,15 +174,14 @@ function viewLetter(letter) {
 function letterFalse() {
   drawHangmang();
 
-  if (errores == 10) {
-    alert(" The secret word is  " + random);
-
+  if (errores == 11) {
     let pantalla = document.getElementById("darw-hangman");
     usedLettersContainer.style.display = "none";
     wordContainer.style.display = "none";
     pantalla.style.display = "none";
     buttonNewGame.style.display = "none";
     gameOver.style.display = "block";
+    alert(" The secret word is  " + random);
     finish();
   }
 }
